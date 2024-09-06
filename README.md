@@ -1,11 +1,14 @@
 # Django Project - Backend
 
+
 ## Requirements
 
 * [Docker](https://www.docker.com/).
 * [Poetry](https://python-poetry.org/) for Python package and environment management.
 
 ## Local Development
+
+* Dont' forget to create a `.env` based on `.env.example` and set the asked values
 
 * Start the stack with Docker Compose:
 
@@ -107,15 +110,13 @@ root@7f26072f31c4:/app#
 
 that means that you are in a `bash` session inside your container, as a `root` user, under the `/app` directory, this directory has another directory called "app" inside, that's where your code lives inside the container: `/app/app`.
 
-```
+
 ### Backend tests
 
 To test the backend run:
 
 ```bash
-
 docker compose run --rm app sh -c "python manage.py test"
-
 ```
 
 The tests run with unnittest, modify and add tests for every app  
@@ -136,5 +137,4 @@ As during local development your app directory You will you need to create migra
 $ docker compose run --rm app sh -c "python manage.py makemigrations"
 
 $ docker compose run --rm app sh -c "python manage.py migrate"
-
 ```
